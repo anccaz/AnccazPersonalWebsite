@@ -53,11 +53,29 @@ export const personalInfo = {
     { name: "Baking", emoji: "🧁" },
   ];
   
+  export const organizations = [
+    {
+      name: "Girls Who Code",
+      role: "President & Graphic Designer",
+      period: "2023 – 2026",
+    },
+    {
+      name: "WEHack",
+      role: "Development Director & Coordinator",
+      period: "2023 – Present",
+    },
+    {
+      name: "Artificial Intelligence Society",
+      role: "AI Mentor Program",
+      period: "2025",
+    },
+  ];
+  
   export const languages = {
     spoken: [
       { name: "English", level: "Native" },
-      { name: "Spanish", level: "Fluent" },
-      { name: "Mandarin Chinese", level: "Fluent" },
+      { name: "Spanish", level: "Working" },
+      { name: "Mandarin Chinese", level: "Working" },
     ],
     programming: [
       { name: "Python", icon: "🐍" },
