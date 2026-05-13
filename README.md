@@ -1,3 +1,3 @@
 # Portfolio
-My Personal Website
-Last Updated: May 13, 2026
+- My Personal Website
+- Last Updated: May 13, 2026
