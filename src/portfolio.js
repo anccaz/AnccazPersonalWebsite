@@ -69,6 +69,11 @@ export const personalInfo = {
       role: "AI Mentor Program",
       period: "2025",
     },
+    {
+      name: "Freshman Mentor Program",
+      role: "Computer Science Mentor",
+      period: "2024-2025",
+    },
   ];
   
   export const languages = {
@@ -83,5 +88,6 @@ export const personalInfo = {
       { name: "JavaScript", icon: "🟨" },
       { name: "Java", icon: "☕" },
       { name: "C", icon: "🔵" },
+      { name: "SQL", icon: "🗄️" },
     ],
   };
