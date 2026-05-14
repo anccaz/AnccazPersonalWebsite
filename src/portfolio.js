@@ -2,7 +2,7 @@ export const personalInfo = {
     name: "Annie Li",
     tagline: "Software Engineer & Machine Learning Researcher",
     school: "University of Texas at Dallas",
-    degree: "Bachelor of Science",
+    degree: "Bachelor of Science in Computer Science",
     minor: "Mathematics",
     gradDate: "Spring 2027",
   };
@@ -55,11 +55,6 @@ export const personalInfo = {
   
   export const organizations = [
     {
-      name: "Girls Who Code",
-      role: "President & Graphic Designer",
-      period: "2023 – 2026",
-    },
-    {
       name: "WEHack",
       role: "Development Director & Coordinator",
       period: "2023 – Present",
@@ -68,6 +63,16 @@ export const personalInfo = {
       name: "Artificial Intelligence Society",
       role: "AI Mentor Program",
       period: "2025",
+    },
+    {
+      name: "Girls Who Code",
+      role: "President & Graphic Designer",
+      period: "2023 – 2026",
+    },
+    {
+      name: "Dallas Formula Racing",
+      role: "Software Developer",
+      period: "2023 – 2025",
     },
     {
       name: "Freshman Mentor Program",

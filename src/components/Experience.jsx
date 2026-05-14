@@ -24,7 +24,7 @@ export default function Experience() {
               {job.upcoming && (
                 <span className="text-xs tracking-widest uppercase px-3 py-1 rounded-full mt-1 md:mt-0 w-fit"
                   style={{ background: 'var(--accent)', color: 'var(--cream)' }}>
-                  Upcoming
+                  Current
                 </span>
               )}
             </div>
