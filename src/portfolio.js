@@ -81,7 +81,7 @@ export const personalInfo = {
       link: "https://github.com/anccaz/SuspensionSteeringLib",
     },
   ];
-  
+
   export const hobbies = [
     { name: "Karaoke", emoji: "🎤" },
     { name: "Figure Skating", emoji: "⛸️" },
@@ -93,26 +93,31 @@ export const personalInfo = {
       name: "WEHack",
       role: "Development Director & Coordinator",
       period: "2023 – Present",
+      link: "https://www.wehackutd.com",
     },
     {
       name: "Artificial Intelligence Society",
       role: "AI Mentor Program",
       period: "2025",
+      link: null,
     },
     {
       name: "Girls Who Code",
       role: "President & Graphic Designer",
       period: "2023 – 2026",
+      link: null,
     },
     {
       name: "Dallas Formula Racing",
       role: "Software Developer",
       period: "2023 – 2025",
+      link: null,
     },
     {
       name: "Freshman Mentor Program",
       role: "Computer Science Mentor",
       period: "2024-2025",
+      link: null,
     },
   ];
   
