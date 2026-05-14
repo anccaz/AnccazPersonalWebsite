@@ -70,3 +70,25 @@ body {
   animation: floatCookie 1.5s ease-out forwards;
   font-size: 1rem;
 }
+
+@keyframes driveUp {
+  from { bottom: 0%; }
+  to   { bottom: 100%; }
+}
+
+.car-track {
+  position: absolute;
+  left: -2px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+}
+
+.car-emoji {
+  position: absolute;
+  left: -12px;
+  font-size: 1.3rem;
+  transition: bottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: rotate(-90deg);
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}

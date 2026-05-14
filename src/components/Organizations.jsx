@@ -11,7 +11,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['♩', '♪', '♫', '♬'][Math.floor(Math.random() * 4)],
+      symbol: ['🎶', '♪', '🎵', '♬'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setNotes(prev => [...prev, ...newNotes]);
@@ -25,7 +25,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['❄️', '❅', '❆', '✦'][Math.floor(Math.random() * 4)],
+      symbol: ['❄️', '🧊', '❆', '✦'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setSnowflakes(prev => [...prev, ...newFlakes]);
@@ -39,7 +39,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🍪', '🍩', '🧇', '🍫'][Math.floor(Math.random() * 4)],
+      symbol: ['🍪', '🍩', '🎂', '🍫'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setCookies(prev => [...prev, ...newCookies]);
