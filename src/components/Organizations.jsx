@@ -1,6 +1,74 @@
 import { hobbies, organizations } from '../portfolio';
+import { useState } from 'react';
 
 export default function Organizations() {
+  const [notes, setNotes] = useState([]);
+  const [snowflakes, setSnowflakes] = useState([]);
+  const [cookies, setCookies] = useState([]);
+
+  function spawnNotes() {
+    const newNotes = Array.from({ length: 8 }, (_, i) => ({
+      id: Date.now() + i,
+      tx: `${Math.random() * 60 - 30}px`,
+      delay: `${Math.random() * 0.8}s`,
+      symbol: ['♩', '♪', '♫', '♬'][Math.floor(Math.random() * 4)],
+      left: `${Math.random() * 40}px`,
+    }));
+    setNotes(prev => [...prev, ...newNotes]);
+    setTimeout(() => {
+      setNotes(prev => prev.filter(n => !newNotes.find(nn => nn.id === n.id)));
+    }, 5000);
+  }
+
+  function spawnSnowflakes() {
+    const newFlakes = Array.from({ length: 8 }, (_, i) => ({
+      id: Date.now() + i,
+      tx: `${Math.random() * 60 - 30}px`,
+      delay: `${Math.random() * 0.8}s`,
+      symbol: ['❄️', '❅', '❆', '✦'][Math.floor(Math.random() * 4)],
+      left: `${Math.random() * 40}px`,
+    }));
+    setSnowflakes(prev => [...prev, ...newFlakes]);
+    setTimeout(() => {
+      setSnowflakes(prev => prev.filter(n => !newFlakes.find(nn => nn.id === n.id)));
+    }, 5000);
+  }
+
+  function spawnCookies() {
+    const newCookies = Array.from({ length: 8 }, (_, i) => ({
+      id: Date.now() + i,
+      tx: `${Math.random() * 60 - 30}px`,
+      delay: `${Math.random() * 0.8}s`,
+      symbol: ['🍪', '🍩', '🧇', '🍫'][Math.floor(Math.random() * 4)],
+      left: `${Math.random() * 40}px`,
+    }));
+    setCookies(prev => [...prev, ...newCookies]);
+    setTimeout(() => {
+      setCookies(prev => prev.filter(n => !newCookies.find(nn => nn.id === n.id)));
+    }, 5000);
+  }
+
+  function getSpawnFn(name) {
+    if (name === 'Karaoke') return spawnNotes;
+    if (name === 'Figure Skating') return spawnSnowflakes;
+    if (name === 'Baking') return spawnCookies;
+    return undefined;
+  }
+
+  function getParticles(name) {
+    if (name === 'Karaoke') return notes;
+    if (name === 'Figure Skating') return snowflakes;
+    if (name === 'Baking') return cookies;
+    return [];
+  }
+
+  function getParticleClass(name) {
+    if (name === 'Karaoke') return 'music-note';
+    if (name === 'Figure Skating') return 'snowflake';
+    if (name === 'Baking') return 'cookie';
+    return '';
+  }
+
   return (
     <section className="px-8 md:px-24 py-24">
       <p className="text-sm tracking-[0.3em] uppercase mb-2" style={{ color: 'var(--muted)' }}>
@@ -19,10 +87,31 @@ export default function Organizations() {
           </h3>
           <div className="flex flex-col gap-6">
             {hobbies.map((hobby, i) => (
-              <div key={i} className="flex items-center gap-5 group">
-                <span className="text-4xl group-hover:scale-125 transition-transform duration-200">
-                  {hobby.emoji}
-                </span>
+              <div
+                key={i}
+                className="flex items-center gap-5 group relative"
+                onMouseEnter={getSpawnFn(hobby.name)}
+              >
+                <div className="relative">
+                  <span className="text-4xl group-hover:scale-125 transition-transform duration-200 inline-block">
+                    {hobby.emoji}
+                  </span>
+                  {getParticles(hobby.name).map(particle => (
+                    <span
+                      key={particle.id}
+                      className={getParticleClass(hobby.name)}
+                      style={{
+                        '--tx': particle.tx,
+                        animationDelay: particle.delay,
+                        left: particle.left,
+                        top: '-10px',
+                        color: 'var(--accent)',
+                      }}
+                    >
+                      {particle.symbol}
+                    </span>
+                  ))}
+                </div>
                 <span className="font-display text-xl italic" style={{ color: 'var(--charcoal)' }}>
                   {hobby.name}
                 </span>
@@ -41,7 +130,6 @@ export default function Organizations() {
               <div key={i} className="relative">
                 <div className="absolute -left-[2.35rem] top-1 w-3 h-3 rounded-full"
                   style={{ background: 'var(--accent)' }} />
-
                 <div className="flex items-center gap-2">
                   <p className="font-medium text-lg" style={{ color: 'var(--charcoal)' }}>
                     {org.name}
@@ -50,7 +138,7 @@ export default function Organizations() {
                     <a href={org.link} target="_blank" rel="noreferrer"
                       className="hover:opacity-60 transition-opacity"
                       style={{ color: 'var(--muted)' }}>
-                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" stroke="#8a8070" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <polyline points="15,3 21,3 21,9" stroke="#8a8070" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         <line x1="10" y1="14" x2="21" y2="3" stroke="#8a8070" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
@@ -58,7 +146,6 @@ export default function Organizations() {
                     </a>
                   )}
                 </div>
-
                 <p className="text-sm mt-1" style={{ color: 'var(--accent)' }}>{org.role}</p>
                 <p className="text-sm" style={{ color: 'var(--muted)' }}>{org.period}</p>
               </div>

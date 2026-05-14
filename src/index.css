@@ -34,3 +34,39 @@ body {
 .delay-3 { animation-delay: 0.4s; }
 .delay-4 { animation-delay: 0.55s; }
 .delay-5 { animation-delay: 0.7s; }
+
+@keyframes floatNote {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.7); }
+}
+
+.music-note {
+  position: absolute;
+  pointer-events: none;
+  animation: floatNote 1.5s ease-out forwards;
+  font-size: 1rem;
+}
+
+@keyframes floatSnowflake {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
+  100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.7) rotate(180deg); }
+}
+
+@keyframes floatCookie {
+  0%   { opacity: 1; transform: translate(0, 0) scale(1); }
+  100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.8); }
+}
+
+.snowflake {
+  position: absolute;
+  pointer-events: none;
+  animation: floatSnowflake 1.5s ease-out forwards;
+  font-size: 1rem;
+}
+
+.cookie {
+  position: absolute;
+  pointer-events: none;
+  animation: floatCookie 1.5s ease-out forwards;
+  font-size: 1rem;
+}
