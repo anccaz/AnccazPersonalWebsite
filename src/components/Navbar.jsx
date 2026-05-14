@@ -1,5 +1,5 @@
 export default function Navbar() {
-    const links = ['Experience', 'Research', 'Organizations', 'Languages'];
+    const links = ['Experience', 'Research', 'Projects', 'Organizations', 'Languages'];
   
     return (
       <nav

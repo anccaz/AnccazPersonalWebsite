@@ -47,6 +47,41 @@ export const personalInfo = {
     },
   ];
   
+  export const projects = [
+    {
+      name: "ForkCast",
+      organization: "Artificial Intelligence Society",
+      period: "Sep 2025 – Dec 2025",
+      description: "Implemented a RAG-based AI chatbot and Computer Vision pipeline to generate predictive business insights.",
+      tech: ["RAG", "Computer Vision", "AI"],
+      link: null,
+    },
+    {
+      name: "Mutual Fund Investment Calculator",
+      organization: "Goldman Sachs Emerging Leaders",
+      period: "Nov 2024 – Feb 2025",
+      description: "A mutual fund investment calculator that estimates and displays a graphical representation of future investment value and annualized returns of 5 mutual funds using the Capital Asset Pricing Model (CAPM).",
+      tech: ["CAPM", "Data Visualization"],
+      link: null,
+    },
+    {
+      name: "EnchanTobor",
+      organization: "WEHack",
+      period: "Mar 2024",
+      description: "A web application to assist incoming UTD students by recommending 4 student organizations from a database of 350+ organizations based on 6 interest questions.",
+      tech: ["Web Development", "Database"],
+      link: "https://github.com/anccaz/EnchanTobor.git",
+    },
+    {
+      name: "Suspension Steering Library",
+      organization: "Dallas Formula Racing",
+      period: "Oct 2023 – May 2024",
+      description: "Python scripts to translate accelerometer and potentiometer sensor data from 4000+ CSV values to calculate linear and rotational acceleration adjacent to time.",
+      tech: ["Python", "Data Analysis", "CSV"],
+      link: "https://github.com/anccaz/SuspensionSteeringLib",
+    },
+  ];
+  
   export const hobbies = [
     { name: "Karaoke", emoji: "🎤" },
     { name: "Figure Skating", emoji: "⛸️" },
