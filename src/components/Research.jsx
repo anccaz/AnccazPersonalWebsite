@@ -115,44 +115,7 @@ export default function Research() {
                 CURRENTLY STUDYING
               </div>
             </div>
-
-            {/* Bookmark */}
-            <div className="absolute z-30"
-              style={{
-                top: '-18px',
-                left: '50%',
-                transform: 'translateX(-50%)',
-                width: '22px',
-              }}>
-              <div style={{
-                width: '22px',
-                height: '70px',
-                background: 'linear-gradient(180deg, #ff6b9d 0%, #ff9eb5 60%, #ff6b9d 100%)',
-                borderRadius: '2px 2px 0 0',
-                boxShadow: '2px 2px 6px rgba(0,0,0,0.15)',
-                position: 'relative',
-              }}>
-                <div style={{
-                  position: 'absolute',
-                  bottom: 0,
-                  left: 0,
-                  right: 0,
-                  height: '12px',
-                  background: `linear-gradient(135deg, #ff6b9d 0%, #ff6b9d 50%, transparent 50%, transparent 100%), 
-                              linear-gradient(-135deg, #ff6b9d 0%, #ff6b9d 50%, transparent 50%, transparent 100%)`,
-                }} />
-                <div style={{
-                  position: 'absolute',
-                  top: '8px',
-                  left: '50%',
-                  transform: 'translateX(-50%)',
-                  fontSize: '10px',
-                }}>
-                  📚
-                </div>
-              </div>
-            </div>
-
+            
             {/* Hover label */}
             <div className="absolute inset-0 flex items-end justify-center pb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
               <span className="text-xs tracking-widest uppercase px-3 py-1 rounded-full"

@@ -1,7 +1,7 @@
 import { hobbies, organizations } from '../portfolio';
 import { useState } from 'react';
 
-import photo1 from '../assets/photo1.jpeg';
+import photo1 from '../assets/photo1.png';
 import photo2 from '../assets/photo2.jpeg';
 import photo3 from '../assets/photo3.jpeg';
 import photo4 from '../assets/photo4.jpeg';
@@ -40,7 +40,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🎼', '🎶', '🎸', '🎵'][Math.floor(Math.random() * 4)],
+      symbol: ['🎵', '🎶', '🎼', '🎸'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setNotes(prev => [...prev, ...newNotes]);
@@ -52,7 +52,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🧣', '🧊', '🌬️', '🧤'][Math.floor(Math.random() * 4)],
+      symbol: ['🧊', '🧤', '🌬️', '🧣'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setSnowflakes(prev => [...prev, ...newFlakes]);
@@ -64,7 +64,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🍪', '🍩', '🍰', '🍫'][Math.floor(Math.random() * 4)],
+      symbol: ['🍪', '🍩', '🍰', '🍮'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setCookies(prev => [...prev, ...newCookies]);
@@ -141,7 +141,7 @@ export default function Organizations() {
               </div>
             ))}
 
-            {/* Heart photo card — below baking */}
+            {/* Heart photo card */}
             <div className="mt-4 flex flex-col items-start">
               <p className="text-xs tracking-widest uppercase mb-3" style={{ color: 'var(--muted)' }}>
                 click to flip ♡
@@ -169,7 +169,7 @@ export default function Organizations() {
                       />
                     </div>
                   </div>
-                  {/* Back — shows next photo hint */}
+                  {/* Back */}
                   <div className="flip-card-back">
                     <div
                       className="girly-border w-full h-full overflow-hidden shadow-lg flex items-center justify-center"
