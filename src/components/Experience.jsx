@@ -44,10 +44,10 @@ export default function Experience() {
 
       <div className="relative border-l-2 pl-10 flex flex-col gap-14" style={{ borderColor: 'var(--accent)' }}>
 
-        {/* Car */}
+        {/* Plane */}
         <span
-          className="car-emoji"
-          style={{ bottom: `${carPosition}%` }}
+          className="plane-emoji"
+          style={{ bottom: `${planePosition}%` }}
         >
           ✈️
         </span>
