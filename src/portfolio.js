@@ -2,7 +2,7 @@ export const personalInfo = {
     name: "Annie Li",
     tagline: "Software Engineer & Machine Learning Researcher",
     school: "University of Texas at Dallas",
-    degree: "Bachelor of Science in Computer Science",
+    degree: "Computer Science",
     minor: "Mathematics",
     gradDate: "Spring 2027",
   };
