@@ -37,7 +37,7 @@ export default function Footer() {
           </div>
   
           <p className="text-sm" style={{ color: 'var(--muted)' }}>
-            © 2026 Annie Li
+            © 2026 Anccaz
           </p>
   
         </div>
