@@ -102,7 +102,7 @@ export default function DrinkDelivery({ order, darkMode }) {
         ))}
       </div>
       <div className="absolute left-0 right-0 flex justify-around px-4 text-lg select-none" style={{ bottom: '52px' }}>
-        {['🌿','🌾','🌿','🌾','🌿','🌾','🌿','🌾','🌿','🌾','🌿'].map((f, i) => (
+        {['🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🍀','🌱','🌿','🌱'].map((f, i) => (
           <span key={i}>{f}</span>
         ))}
       </div>

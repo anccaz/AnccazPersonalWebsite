@@ -18,7 +18,7 @@ export default function Footer() {
             </a>
   
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noreferrer"
+            <a href="https://linkedin.com/in/anccaz" target="_blank" rel="noreferrer"
               className="hover:opacity-60 transition-opacity">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="#8a8070" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>

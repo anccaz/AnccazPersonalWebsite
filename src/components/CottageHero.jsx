@@ -69,10 +69,10 @@ export default function CottageHero({ onOrder, darkMode }) {
       </div>
 
       {/* Left cloud */}
-      <div className="absolute" style={{ top: '8px', left: '12%' }}>
+      <div className="absolute" style={{ top: '28px', left: '12%' }}>
         <div className="relative">
-          <div className="w-20 h-10 rounded-full" style={{ background: cloudBg }} />
-          <div className="w-14 h-10 rounded-full absolute -top-4 left-3" style={{ background: cloudBg }} />
+          <div className="w-20 h-12 rounded-full" style={{ background: cloudBg }} />
+          <div className="w-14 h-9 rounded-full absolute -top-3 left-3" style={{ background: cloudBg }} />
         </div>
       </div>
 
@@ -94,13 +94,13 @@ export default function CottageHero({ onOrder, darkMode }) {
         ))}
       </div>
       <div className="absolute left-0 right-0 flex justify-around px-8 text-xl select-none" style={{ bottom: '68px', zIndex: 5 }}>
-        {['🌿','🌾','🌿','🌾','🌿','🌾','🌿','🌾','🌿','🌾','🌿','🌾'].map((f, i) => (
+        {['🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🍀','🌱','🌿','🌱'].map((f, i) => (
           <span key={i}>{f}</span>
         ))}
       </div>
 
       {/* Cottage */}
-      <div className="absolute" style={{ bottom: '108px', left: '50%', transform: 'translateX(-50%)', width: '240px', zIndex: 10 }}>
+      <div className="absolute" style={{ bottom: '119px', left: '50%', transform: 'translateX(-50%)', width: '240px', zIndex: 10 }}>
 
         {/* Chimney */}
         <div className="absolute w-6 h-8 rounded-sm" style={{ background: darkMode ? '#6b3a2a' : '#b06040', top: '8px', right: '52px', zIndex: 5 }} />
@@ -160,10 +160,6 @@ export default function CottageHero({ onOrder, darkMode }) {
               </div>
             )}
           </div>
-
-          {/* Door */}
-          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-10 h-14 rounded-t-full"
-            style={{ background: accent }} />
         </div>
       </div>
 
