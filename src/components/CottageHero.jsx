@@ -104,9 +104,6 @@ export default function CottageHero({ onOrder, darkMode }) {
       {/* Cottage */}
       <div className="absolute" style={{ bottom: '119px', left: '50%', transform: 'translateX(-50%)', width: '240px', zIndex: 10 }}>
 
-        {/* Chimney */}
-        <div className="absolute w-6 h-8 rounded-sm" style={{ background: darkMode ? '#6b3a2a' : '#b06040', top: '8px', right: '52px', zIndex: 5 }} />
-
         {/* Roof */}
         <div style={{ position: 'relative', height: '75px' }}>
           <svg viewBox="0 0 240 75" className="w-full h-full">
@@ -139,7 +136,7 @@ export default function CottageHero({ onOrder, darkMode }) {
 
             {/* Annie inside window */}
             {(hovered || ordering || ordered) && (
-              <div style={{ position: 'absolute', bottom: 0, left: '50%', transform: 'translateX(-50%)', animation: 'fadeUp 0.4s ease forwards' }}>
+              <div style={{ position: 'absolute', bottom: 0, left: '20%', transform: 'translateX(-50%)', animation: 'fadeUp 0.4s ease forwards' }}>
                 <svg width="44" height="52" viewBox="0 0 48 56">
                   <ellipse cx="24" cy="22" rx="18" ry="20" fill="#1a0a00" />
                   <ellipse cx="24" cy="22" rx="14" ry="15" fill="#f5c5a3" />
@@ -199,7 +196,7 @@ export default function CottageHero({ onOrder, darkMode }) {
       {/* Menu sign */}
       {ordering && (
         <div className="absolute z-20 flex flex-col items-center"
-          style={{ bottom: '108px', left: 'calc(50% - 300px)', animation: 'fadeUp 0.3s ease forwards' }}>
+          style={{ bottom: '108px', left: 'calc(40% - 300px)', animation: 'fadeUp 0.3s ease forwards' }}>
           <div className="rounded-2xl p-4 shadow-xl"
             style={{ background: '#fffde7', border: `2.5px solid ${accent}`, minWidth: '220px' }}>
             <p className="font-display text-center text-sm font-bold mb-3" style={{ color: '#1a1a1a' }}>

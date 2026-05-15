@@ -3,9 +3,9 @@ import { useState, useRef, useEffect } from 'react';
 
 const DIM_SUM = [
   { emoji: '🥟' },
-  { emoji: '🥮' },
-  { emoji: '🍡' },
   { emoji: '🦀' },
+  { emoji: '🍡' },
+  { emoji: '🥮' },
 ];
 
 function Steam() {
