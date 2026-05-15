@@ -19,6 +19,13 @@ body {
   font-family: 'Playfair Display', serif;
 }
 
+.dark-mode {
+  --charcoal: #f0e8ff;
+  --muted: #c4b0e8;
+  --cream: #0a0520;
+  --accent: #b36dff;
+}
+
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -40,13 +47,6 @@ body {
   100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.7); }
 }
 
-.music-note {
-  position: absolute;
-  pointer-events: none;
-  animation: floatNote 1.5s ease-out forwards;
-  font-size: 1rem;
-}
-
 @keyframes floatSnowflake {
   0%   { opacity: 1; transform: translate(0, 0) scale(1) rotate(0deg); }
   100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.7) rotate(180deg); }
@@ -55,6 +55,13 @@ body {
 @keyframes floatCookie {
   0%   { opacity: 1; transform: translate(0, 0) scale(1); }
   100% { opacity: 0; transform: translate(var(--tx), -60px) scale(0.8); }
+}
+
+.music-note {
+  position: absolute;
+  pointer-events: none;
+  animation: floatNote 1.5s ease-out forwards;
+  font-size: 1rem;
 }
 
 .snowflake {
@@ -71,27 +78,9 @@ body {
   font-size: 1rem;
 }
 
-@keyframes driveUp {
-  from { bottom: 0%; }
-  to   { bottom: 100%; }
+@keyframes catWalk {
+  0%   { transform: translateX(0); }
+  49%  { transform: translateX(2px); }
+  50%  { transform: translateX(0) scaleX(-1); }
+  100% { transform: translateX(0) scaleX(-1); }
 }
-
-.car-track {
-  position: absolute;
-  left: -2px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-}
-
-.car-emoji {
-  position: absolute;
-  left: -12px;
-  font-size: 1.3rem;
-  transition: bottom 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-  transform: rotate(-90deg);
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
-}
-
-
-
