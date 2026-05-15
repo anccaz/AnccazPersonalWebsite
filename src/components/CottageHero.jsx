@@ -41,7 +41,9 @@ export default function CottageHero({ onOrder, darkMode }) {
   return (
     <div className="relative w-full overflow-hidden" style={{
       height: '480px',
-      background: `linear-gradient(180deg, ${skyTop} 0%, ${skyTop} 60%, ${skyBot} 100%)`,
+      background: darkMode
+        ? `linear-gradient(180deg, #0a0520 0%, #0a0520 60%, #1a0a2e 100%)`
+        : `linear-gradient(180deg, #fce8f0 0%, #fce8f0 55%, #f5f0e8 100%)`,
       transition: 'background 0.8s ease',
     }}>
 
