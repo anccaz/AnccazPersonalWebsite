@@ -21,7 +21,7 @@ export default function Hero() {
       <p className="fade-up delay-4 text-xl md:text-2xl font-light max-w-xl leading-relaxed" style={{ color: 'var(--muted)' }}>
         {personalInfo.degree} · {personalInfo.minor} Minor<br />
         <span className="italic font-display" style={{ color: 'var(--accent)' }}>{personalInfo.school}</span>
-        <br />Graduating {personalInfo.gradDate}
+        <br />{personalInfo.gradDate}
       </p>
 
       <div className="fade-up delay-5 flex gap-6 mt-10 text-sm tracking-widest uppercase" style={{ color: 'var(--muted)' }}>
