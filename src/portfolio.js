@@ -13,7 +13,7 @@ export const personalInfo = {
       role: "Software Engineering Intern",
       location: "Dallas, TX",
       period: "Summer 2026",
-      upcoming: true,
+      upcoming: false,
     },
     {
       company: "Penske Motor Group",
