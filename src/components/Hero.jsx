@@ -19,7 +19,7 @@ export default function Hero() {
       <div className="fade-up delay-3 w-16 h-px mb-6" style={{ background: 'var(--accent)' }} />
 
       <p className="fade-up delay-4 text-xl md:text-2xl font-light max-w-xl leading-relaxed" style={{ color: 'var(--muted)' }}>
-        {personalInfo.degree} · {personalInfo.minor} Minor<br />
+        {personalInfo.degree} · {personalInfo.minor} <br />
         <span className="italic font-display" style={{ color: 'var(--accent)' }}>{personalInfo.school}</span>
         <br />{personalInfo.gradDate}
       </p>
