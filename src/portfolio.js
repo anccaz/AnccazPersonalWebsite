@@ -40,8 +40,9 @@ export const personalInfo = {
   
   export const research = [
     {
-      lab: "Dr. Yunhui Guo's Research Lab",
+      lab: "Deep Learning Lab",
       role: "Research Assistant",
+      advisor: "Dr. Yunhui Guo",
       institution: "University of Texas at Dallas",
       period: "Aug 2026 – Present",
       description:
