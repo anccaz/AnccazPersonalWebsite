@@ -146,5 +146,7 @@ export const personalInfo = {
       { name: "Java", icon: "☕" },
       { name: "C", icon: "🔵" },
       { name: "SQL", icon: "🗄️" },
+      { name: "R", icon: "📊" },
+      { name: "HTML/CSS", icon: "🎨" },
     ],
   };
