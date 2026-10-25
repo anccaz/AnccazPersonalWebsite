@@ -25,17 +25,22 @@ export default function Research() {
                 {r.lab}
               </h3>
               <p className="text-lg font-medium mb-1" style={{ color: 'var(--accent)' }}>
-                {r.role}
+                {r.role}{r.advisor ? ` · ${r.advisor}` : ''}
               </p>
-              <p className="text-sm" style={{ color: 'var(--muted)' }}>
+              <p className="text-sm mb-3" style={{ color: 'var(--muted)' }}>
                 {r.institution} · {r.period}
               </p>
+              {r.description && (
+                <p className="text-sm leading-relaxed" style={{ color: 'var(--charcoal)' }}>
+                  {r.description}
+                </p>
+              )}
             </div>
           ))}
         </div>
 
-        {/* Open book Link */}
-        <a 
+        {/* Open book link */}
+        <a
           href={GOODREADS_URL}
           target="_blank"
           rel="noreferrer"
@@ -85,10 +90,6 @@ export default function Research() {
                   background: 'linear-gradient(135deg, #e8d8c0 50%, transparent 50%)',
                   opacity: 0.6,
                 }} />
-              <div className="absolute bottom-2 left-0 right-0 text-center"
-                style={{ fontSize: '0.55rem', color: '#8a8070', letterSpacing: '0.1em' }}>
-                CURRENTLY READING
-              </div>
             </div>
 
             {/* Right page — textbook */}
@@ -110,12 +111,8 @@ export default function Research() {
                   background: 'linear-gradient(-135deg, #e8d8c0 50%, transparent 50%)',
                   opacity: 0.6,
                 }} />
-              <div className="absolute bottom-2 left-0 right-0 text-center"
-                style={{ fontSize: '0.55rem', color: '#8a8070', letterSpacing: '0.1em' }}>
-                CURRENTLY STUDYING
-              </div>
             </div>
-            
+
             {/* Hover label */}
             <div className="absolute inset-0 flex items-end justify-center pb-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-40">
               <span className="text-xs tracking-widest uppercase px-3 py-1 rounded-full"
