@@ -99,12 +99,7 @@ export default function DrinkDelivery({ order, darkMode }) {
           background: `linear-gradient(180deg, ${groundTop} 0%, ${groundBot} 55%, ${pageBg} 100%)`,
         }} />
 
-      {/* Flowers */}
-      <div className="absolute left-0 right-0 flex justify-around px-2 text-2xl select-none" style={{ bottom: '72px' }}>
-        {['🌸','🌼','🌷','🌻','🌸','🌼','🌷','🌻','🌸','🌼','🌷','🌻','🌸'].map((f, i) => (
-          <span key={i}>{f}</span>
-        ))}
-      </div>
+      {/* Plants */}
       <div className="absolute left-0 right-0 flex justify-around px-4 text-lg select-none" style={{ bottom: '52px' }}>
         {['🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🌿'].map((f, i) => (
           <span key={i}>{f}</span>
