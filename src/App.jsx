@@ -44,7 +44,7 @@ function App() {
         <CottageHero onOrder={setOrder} darkMode={darkMode} />
         <div id="experience"><Experience darkMode={darkMode} /></div>
         <div id="research"><Research /></div>
-        <div id="projects"><Projects /></div>
+        <div id="projects"><Projects darkMode={darkMode} /></div>
         <div id="organizations"><Organizations /></div>
         <div id="languages"><Languages /></div>
         <DrinkDelivery order={order} darkMode={darkMode} />
