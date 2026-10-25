@@ -46,6 +46,7 @@ export default function DrinkDelivery({ order, darkMode }) {
     : 'linear-gradient(180deg, #f5f0e8 0%, #fce8f0 35%, #fce8f0 65%, #c8e6a0 100%)';
   const groundTop = darkMode ? '#1a3320' : '#c8e6a0';
   const groundBot = darkMode ? '#0d2010' : '#a8d070';
+  const pageBg = darkMode ? '#0a0520' : '#f5f0e8';
   const shirt = darkMode ? '#7c3aed' : '#ff9eb5';
   const hairBow = darkMode ? '#b36dff' : '#ff9eb5';
   const bowCenter = darkMode ? '#7c3aed' : '#ff6b9d';
@@ -91,9 +92,12 @@ export default function DrinkDelivery({ order, darkMode }) {
         </div>
       </div>
 
-      {/* Ground */}
+      {/* Ground — fades into page background */}
       <div className="absolute bottom-0 left-0 right-0"
-        style={{ height: '100px', background: `linear-gradient(180deg, ${groundTop} 0%, ${groundBot} 100%)` }} />
+        style={{
+          height: '100px',
+          background: `linear-gradient(180deg, ${groundTop} 0%, ${groundBot} 55%, ${pageBg} 100%)`,
+        }} />
 
       {/* Flowers */}
       <div className="absolute left-0 right-0 flex justify-around px-2 text-2xl select-none" style={{ bottom: '72px' }}>
@@ -102,7 +106,7 @@ export default function DrinkDelivery({ order, darkMode }) {
         ))}
       </div>
       <div className="absolute left-0 right-0 flex justify-around px-4 text-lg select-none" style={{ bottom: '52px' }}>
-        {['🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🍀','🌱','🌿','🌱'].map((f, i) => (
+        {['🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🌿','🌱','🌿'].map((f, i) => (
           <span key={i}>{f}</span>
         ))}
       </div>
