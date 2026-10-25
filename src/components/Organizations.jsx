@@ -95,7 +95,7 @@ export default function Organizations() {
   return (
     <section className="px-8 md:px-24 py-24">
       <p className="text-sm tracking-[0.3em] uppercase mb-2" style={{ color: 'var(--muted)' }}>
-        Beyond the Code
+        Beyond and Between the Code
       </p>
       <h2 className="font-display text-4xl md:text-5xl font-bold mb-16" style={{ color: 'var(--charcoal)' }}>
         Hobbies & Organizations
