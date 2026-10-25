@@ -40,10 +40,21 @@ export const personalInfo = {
   
   export const research = [
     {
-      lab: "Natural Language Processing Lab",
+      lab: "Dr. Yunhui Guo's Research Lab",
       role: "Research Assistant",
       institution: "University of Texas at Dallas",
-      period: "Mar 2026 – Present",
+      period: "Aug 2026 – Present",
+      description:
+        "Conducted test-time adaptation research, evaluating black-box model generalization.",
+    },
+    {
+      lab: "Natural Language Processing Lab",
+      role: "Research Assistant",
+      advisor: "Dr. Vincent Ng",
+      institution: "University of Texas at Dallas",
+      period: "Mar 2026 – Jul 2026",
+      description:
+        "Developed 20+ NLP evaluation benchmarks to analyze LLM performance.",
     },
   ];
   
