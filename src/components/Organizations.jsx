@@ -43,7 +43,7 @@ export default function Organizations() {
   }
 
   function getSpawnFn(name) {
-    if (name === 'Karaoking') return spawnNotes;
+    if (name === 'Karaoke') return spawnNotes;
     if (name === 'Figure Skating') return spawnSnowflakes;
     if (name === 'Baking') return spawnCookies;
     return undefined;
@@ -76,9 +76,6 @@ export default function Organizations() {
 
         {/* Hobbies */}
         <div>
-          <h3 className="font-display text-2xl font-bold mb-8" style={{ color: 'var(--charcoal)' }}>
-            Probably
-          </h3>
           <div className="flex flex-col gap-6">
             {hobbies.map((hobby, i) => (
               <div
