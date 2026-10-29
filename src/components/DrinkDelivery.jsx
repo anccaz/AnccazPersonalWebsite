@@ -176,7 +176,7 @@ export default function DrinkDelivery({ order, darkMode }) {
         {phase === 'bye' && (
           <div className="absolute text-xs px-3 py-2 rounded-xl shadow-md whitespace-nowrap"
             style={{ bottom: '70px', right: '50px', background: 'white', border: '1.5px solid #f0d0c0', color: '#1a1a1a', animation: 'fadeUp 0.3s ease forwards' }}>
-            Thank you for coming,<br />visit again soon! 💕
+            Thank you for coming,<br />visit again soon!
           </div>
         )}
       </div>
