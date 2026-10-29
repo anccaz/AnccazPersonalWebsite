@@ -1,46 +1,17 @@
 import { hobbies, organizations } from '../portfolio';
 import { useState } from 'react';
 
-import photo1 from '../assets/photo1.png';
-import photo2 from '../assets/photo2.jpeg';
-import photo3 from '../assets/photo3.jpeg';
-import photo4 from '../assets/photo4.jpeg';
-import photo5 from '../assets/photo5.jpeg';
-
-const PHOTOS = [photo1, photo2, photo3, photo4, photo5];
-
-const HEART_CLIP = `polygon(
-  50% 90%, 15% 55%, 5% 40%, 5% 28%,
-  15% 15%, 30% 10%, 50% 22%,
-  70% 10%, 85% 15%, 95% 28%,
-  95% 40%, 85% 55%, 50% 90%
-)`;
-
 export default function Organizations() {
   const [notes, setNotes] = useState([]);
   const [snowflakes, setSnowflakes] = useState([]);
   const [cookies, setCookies] = useState([]);
-  const [photoIndex, setPhotoIndex] = useState(0);
-  const [flipped, setFlipped] = useState(false);
-  const [isAnimating, setIsAnimating] = useState(false);
-
-  function handleHeartClick() {
-    if (isAnimating) return;
-    setIsAnimating(true);
-    setFlipped(true);
-    setTimeout(() => {
-      setPhotoIndex(prev => (prev + 1) % PHOTOS.length);
-      setFlipped(false);
-      setIsAnimating(false);
-    }, 600);
-  }
 
   function spawnNotes() {
     const newNotes = Array.from({ length: 8 }, (_, i) => ({
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🎵', '🎶', '🎼', '🎸'][Math.floor(Math.random() * 4)],
+      symbol: ['♩', '♪', '♫', '♬'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setNotes(prev => [...prev, ...newNotes]);
@@ -52,7 +23,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🧊', '🧤', '🌬️', '🧣'][Math.floor(Math.random() * 4)],
+      symbol: ['❄️', '❅', '❆', '✦'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setSnowflakes(prev => [...prev, ...newFlakes]);
@@ -64,7 +35,7 @@ export default function Organizations() {
       id: Date.now() + i,
       tx: `${Math.random() * 60 - 30}px`,
       delay: `${Math.random() * 0.8}s`,
-      symbol: ['🍪', '🍩', '🍰', '🍮'][Math.floor(Math.random() * 4)],
+      symbol: ['🍪', '🍩', '🧇', '🍫'][Math.floor(Math.random() * 4)],
       left: `${Math.random() * 40}px`,
     }));
     setCookies(prev => [...prev, ...newCookies]);
@@ -95,7 +66,7 @@ export default function Organizations() {
   return (
     <section className="px-8 md:px-24 py-24">
       <p className="text-sm tracking-[0.3em] uppercase mb-2" style={{ color: 'var(--muted)' }}>
-        Beyond and Between the Code
+        Beyond the Code
       </p>
       <h2 className="font-display text-4xl md:text-5xl font-bold mb-16" style={{ color: 'var(--charcoal)' }}>
         Hobbies & Organizations
@@ -140,55 +111,6 @@ export default function Organizations() {
                 </span>
               </div>
             ))}
-
-            {/* Heart photo card */}
-            <div className="mt-4 flex flex-col items-start">
-              <p className="text-xs tracking-widest uppercase mb-3" style={{ color: 'var(--muted)' }}>
-                click to flip ♡
-              </p>
-              <div
-                className="flip-card"
-                style={{ width: '160px', height: '180px' }}
-                onClick={handleHeartClick}
-              >
-                <div className={`flip-card-inner ${flipped ? 'flipped' : ''}`}>
-                  {/* Front */}
-                  <div className="flip-card-front">
-                    <div
-                      className="girly-border w-full h-full overflow-hidden shadow-lg"
-                      style={{
-                        clipPath: HEART_CLIP,
-                        background: '#fff0f5',
-                        borderRadius: '4px',
-                      }}
-                    >
-                      <img
-                        src={PHOTOS[photoIndex]}
-                        alt="Annie"
-                        className="w-full h-full object-cover"
-                      />
-                    </div>
-                  </div>
-                  {/* Back */}
-                  <div className="flip-card-back">
-                    <div
-                      className="girly-border w-full h-full overflow-hidden shadow-lg flex items-center justify-center"
-                      style={{
-                        clipPath: HEART_CLIP,
-                        background: '#fff0f5',
-                        borderRadius: '4px',
-                      }}
-                    >
-                      <span style={{ fontSize: '2.5rem' }}>💛</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs mt-3" style={{ color: 'var(--muted)' }}>
-                {photoIndex + 1} / {PHOTOS.length}
-              </p>
-            </div>
-
           </div>
         </div>
 
